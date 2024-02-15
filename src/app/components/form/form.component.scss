@@ -1,0 +1,47 @@
+.form__block {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.my-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.my-form__gender {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.my-form__sex {
+  display: flex;
+
+  gap: 10px;
+}
+.my-form__coments {
+  display: flex;
+  flex-direction: column;
+}
+.form__btn {
+  display: flex;
+  justify-content: space-between;
+  button {
+    cursor: pointer;
+  }
+}
+
+.container__form {
+  position: relative;
+}
+.app-info-form {
+  display: none;
+  color: black;
+  background-color: aquamarine;
+  position: absolute;
+  width: 50%;
+  top: 0;
+}
+.open__table {
+  display: block;
+}

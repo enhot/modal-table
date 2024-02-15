@@ -1,0 +1,47 @@
+.close__table {
+  display: none;
+}
+.table__container {
+  position: relative;
+  width: 100%;
+  display: grid;
+}
+table {
+  display: grid;
+  border-collapse: collapse;
+  grid-template-columns: 0.2fr 0.5fr 0.5fr 0.5fr 1fr 0.2fr;
+}
+
+thead,
+tbody,
+tr {
+  display: contents;
+}
+
+th,
+td {
+  padding: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+th {
+  position: sticky;
+  top: 0;
+  background: #6c7ae0;
+  text-align: left;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: white;
+}
+
+th:last-child {
+  border: 0;
+}
+
+.delet-item {
+  cursor: pointer;
+}
+.close-table_cursor {
+  cursor: pointer;
+}

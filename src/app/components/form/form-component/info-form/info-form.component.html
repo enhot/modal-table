@@ -1,0 +1,26 @@
+<div #table class="table__container">
+  <table>
+    <thead>
+      <tr class="table__tr">
+        <th data-type="numeric">№</th>
+        <th data-type="text-short">First Name</th>
+        <th data-type="text-short">Last Name</th>
+        <th data-type="text-short">Sex</th>
+        <th data-type="text-short">Message</th>
+        <th (click)="closeTable()" class="close-table_cursor">X</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of myFormData; track item; let id = $index) {
+      <tr>
+        <td>{{ id + 1 }}</td>
+        <td>{{ item.firstName }}</td>
+        <td>{{ item.lastName }}</td>
+        <td>{{ item.gender }}</td>
+        <td>{{ item.message }}</td>
+        <td class="delet-item" (click)="deletItem(id)">C</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

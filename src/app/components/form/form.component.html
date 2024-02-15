@@ -1,0 +1,58 @@
+<div class="container__form container">
+  <div class="form__block">
+    <h1>Заполни данные</h1>
+    <form
+      [formGroup]="myForm"
+      (submit)="submitForm()"
+      class="my-form"
+      novalidate
+    >
+      <div class="my-form__gender">
+        <label for="">Введите ваше имя</label>
+        <input formControlName="firstName" name="firstName" />
+        <label for="">Введите вашу фамилию</label>
+        <input formControlName="lastName" name="lastName" />
+      </div>
+      <div class="my-form__sex">
+        <input
+          formControlName="gender"
+          type="radio"
+          name="gender"
+          value="male"
+        />
+        Мужчина<br />
+        <input
+          formControlName="gender"
+          type="radio"
+          name="gender"
+          value="feme"
+        />
+        Женщина<br />
+        <input
+          formControlName="gender"
+          type="radio"
+          name="gender"
+          value="other"
+        />
+        другое
+      </div>
+      <div class="my-form__coments">
+        <label for="">Напиши о себе</label>
+        <textarea formControlName="message" name="message" rows="10" cols="30">
+        </textarea>
+      </div>
+    </form>
+    <div class="form__btn">
+      <button [disabled]="myForm.invalid" (click)="submitForm()">
+        Send form
+      </button>
+      <button (click)="lookInfo()">Look past form</button>
+    </div>
+  </div>
+  <div #table class="app-info-form">
+    <app-info-form
+      [myFormData]="formData"
+      (closeTableEvent)="closeTable()"
+    ></app-info-form>
+  </div>
+</div>
